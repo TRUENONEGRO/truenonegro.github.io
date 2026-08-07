@@ -496,6 +496,10 @@ a {
    INTEGRANTES
    ========================================================= */
 
+.members {
+    background: #080808;
+}
+
 .members-grid {
     display: grid;
 
@@ -508,52 +512,105 @@ a {
 }
 
 .member {
+    position: relative;
+
     background: #101010;
 
     border: 1px solid rgba(255, 255, 255, 0.06);
 
     overflow: hidden;
 
-    transition: 0.4s ease;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
 }
 
 .member:hover {
     transform: translateY(-8px);
 
-    border-color: var(--border);
+    border-color:
+        rgba(214, 165, 43, 0.45);
 }
 
+
+/* FOTO */
+
 .member-image {
-    height: 350px;
+    position: relative;
+
+    width: 100%;
+    height: 430px;
+
+    background-size: cover;
+    background-position: center top;
+
+    transition:
+        transform 0.6s ease;
+
+}
+
+
+/* OSCURECIMIENTO INFERIOR */
+
+.member-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
 
     background:
         linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.10) 65%,
             transparent
         );
-
-    background-color: #151515;
-
-    background-size: cover;
-    background-position: center;
 }
 
-.member h3 {
-    padding: 20px 20px 5px;
 
-    font-size: 18px;
+/* ZOOM */
+
+.member:hover .member-image {
+    transform: scale(1.04);
 }
 
-.member p {
-    padding: 0 20px 20px;
+
+/* INFORMACIÓN */
+
+.member-info {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 25px;
+
+    z-index: 2;
+}
+
+.member-info h3 {
+    margin: 0 0 6px;
+
+    font-size: 21px;
+
+    color: white;
+}
+
+.member-info p {
+    margin: 0;
 
     color: var(--gold);
 
-    font-size: 11px;
-    letter-spacing: 2px;
-}
+    font-size: 10px;
 
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
 
 /* =========================================================
    DISCOGRAFÍA
