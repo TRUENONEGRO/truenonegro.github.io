@@ -821,48 +821,94 @@ a {
    VIDEOS
    ========================================================= */
 
-.video-placeholder {
-    position: relative;
-
-    min-height: 500px;
-
-    margin-top: 50px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.videos {
     background:
         radial-gradient(
-            circle,
-            rgba(214, 165, 43, 0.10),
-            transparent 45%
+            circle at 50% 20%,
+            rgba(214, 165, 43, 0.06),
+            transparent 40%
         ),
-        #0b0b0b;
+        #050505;
+}
+
+
+/* =========================================================
+   VIDEO DESTACADO
+   ========================================================= */
+
+.video-featured {
+    margin-top: 55px;
+
+    width: 100%;
+
+    background: #0b0b0b;
+
+    border: 1px solid rgba(214, 165, 43, 0.20);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   VIDEOS SECUNDARIOS
+   ========================================================= */
+
+.videos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.video-card {
+    background: #0b0b0b;
 
     border: 1px solid rgba(255, 255, 255, 0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
 }
 
-.play-icon {
-    display: block;
+.video-card:hover {
+    transform: translateY(-6px);
 
-    margin-bottom: 15px;
-
-    color: var(--gold);
-
-    font-size: 45px;
-
-    text-align: center;
+    border-color:
+        rgba(214, 165, 43, 0.40);
 }
 
-.video-placeholder p {
-    color: var(--gray);
 
-    text-align: center;
+/* =========================================================
+   CONTENEDOR YOUTUBE
+   ========================================================= */
 
-    letter-spacing: 2px;
+.video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    background: #000;
 }
 
+.video-wrapper iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
 
 /* =========================================================
    GALERÍA
@@ -1074,6 +1120,17 @@ footer p + p {
 
 
 @media (max-width: 700px) {
+       /* =====================================================
+       VIDEOS — MOBILE
+       ===================================================== */
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-featured {
+        margin-top: 35px;
+    }
 
        /* =========================================================
        DISCOGRAFÍA — MOBILE
