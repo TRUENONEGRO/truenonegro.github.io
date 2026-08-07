@@ -991,3 +991,68 @@ footer p + p {
     }
 
 }
+
+
+/* =========================================================
+   ANIMACIONES DE SCROLL
+   ========================================================= */
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ANIMACIÓN ESCALONADA DE ÁLBUMES
+   ========================================================= */
+
+.album:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.album:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.album:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.album:nth-child(4) {
+    transition-delay: 0.20s;
+}
+
+.album:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+
+/* =========================================================
+   ANIMACIÓN ESCALONADA DE INTEGRANTES
+   ========================================================= */
+
+.member:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.member:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.member:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.member:nth-child(4) {
+    transition-delay: 0.20s;
+}
