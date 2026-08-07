@@ -1988,3 +1988,15 @@ footer p + p {
 .album-featured-image:hover::before {
     opacity: 1;
 }
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
