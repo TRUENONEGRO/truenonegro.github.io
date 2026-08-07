@@ -273,13 +273,17 @@ a {
 /* LOGO */
 
 .hero-logo {
-    width: min(760px, 90vw);
+    width: min(650px, 78vw);
+    height: auto;
 
     filter:
-        drop-shadow(0 0 15px rgba(214, 165, 43, 0.30))
-        drop-shadow(0 0 50px rgba(214, 165, 43, 0.15));
+        drop-shadow(0 0 12px rgba(214, 165, 43, 0.35))
+        drop-shadow(0 0 35px rgba(214, 165, 43, 0.20));
 
     animation: logoGlow 4s ease-in-out infinite;
+
+    position: relative;
+    z-index: 3;
 }
 
 
