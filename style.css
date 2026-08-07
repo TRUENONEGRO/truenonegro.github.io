@@ -1919,3 +1919,72 @@ footer p + p {
 }
 
 
+/* =========================================================
+   DISCOGRAFÍA — EFECTO SPOTIFY
+   ========================================================= */
+
+.album-cover {
+    position: relative;
+    overflow: hidden;
+}
+
+.album-cover::after {
+    content: "▶  SPOTIFY";
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    color: var(--gold);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+}
+
+.album:hover .album-cover::after {
+    opacity: 1;
+}
+
+.album-featured-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.album-featured-image::before {
+    content: "▶  ESCUCHAR EN SPOTIFY";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.60);
+
+    color: var(--gold);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+}
+
+.album-featured-image:hover::before {
+    opacity: 1;
+}
