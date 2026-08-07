@@ -2089,3 +2089,178 @@ section {
 }
 
 
+
+/* =========================================================
+   LA BANDA
+   ========================================================= */
+
+.band-image {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 45px auto 55px;
+
+    overflow: hidden;
+
+    border: 1px solid
+        rgba(214, 165, 43, 0.35);
+}
+
+.band-image img {
+    width: 100%;
+
+    display: block;
+
+    height: auto;
+}
+
+
+/* PRESENTACIÓN */
+
+.band-intro {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* BIOGRAFÍA */
+
+.band-history {
+    max-width: 850px;
+
+    margin: 75px auto 90px;
+
+    padding: 40px;
+
+    border-left: 2px solid var(--gold);
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.band-history .section-label {
+    margin-bottom: 25px;
+}
+
+.band-history p {
+    margin: 0 0 22px;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.band-history p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* FORMACIÓN */
+
+.band-lineup {
+    margin-top: 70px;
+}
+
+.band-lineup > h3 {
+    margin: 10px 0 40px;
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+}
+
+.lineup-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1px;
+
+    background:
+        rgba(214, 165, 43, 0.25);
+
+    border: 1px solid
+        rgba(214, 165, 43, 0.25);
+}
+
+.lineup-member {
+    padding: 35px;
+
+    background: #0b0b0b;
+}
+
+.lineup-member span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.lineup-member h4 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 21px;
+
+    letter-spacing: 1px;
+}
+
+
+/* MANAGEMENT */
+
+.band-management {
+    margin-top: 90px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    border-top: 1px solid
+        rgba(214, 165, 43, 0.25);
+
+    border-bottom: 1px solid
+        rgba(214, 165, 43, 0.25);
+}
+
+.management-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.band-management h3 {
+    margin: 0 0 10px;
+
+    color: white;
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+}
+
+.band-management p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+}
