@@ -1929,7 +1929,7 @@ footer p + p {
 }
 
 .album-cover::after {
-    content: "▶  SPOTIFY";
+    content: "▶  ESCUCHAR";
 
     position: absolute;
     inset: 0;
@@ -1961,7 +1961,7 @@ footer p + p {
 }
 
 .album-featured-image::before {
-    content: "▶  ESCUCHAR EN SPOTIFY";
+    content: "▶  ESCUCHAR";
 
     position: absolute;
     inset: 0;
