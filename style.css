@@ -1075,6 +1075,44 @@ footer p + p {
 
 @media (max-width: 700px) {
 
+       /* =========================================================
+       DISCOGRAFÍA — MOBILE
+       ========================================================= */
+
+    .album-featured {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .album-featured-image {
+        height: 380px;
+    }
+
+    .album-featured-image::after {
+        background:
+            linear-gradient(
+                to bottom,
+                transparent 55%,
+                #0d0d0d 100%
+            );
+    }
+
+    .album-featured-info {
+        padding: 35px 25px 40px;
+    }
+
+    .album-featured-info h3 {
+        font-size: 50px;
+    }
+
+    .albums-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .album-info h3 {
+        min-height: auto;
+    }
+
     .navbar {
         height: 70px;
         padding: 0 20px;
