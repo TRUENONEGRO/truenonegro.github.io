@@ -2264,3 +2264,15 @@ section {
 
     font-size: 13px;
 }
+
+
+.pmf-logo {
+    display: block;
+
+    width: 180px;
+    max-width: 70%;
+
+    height: auto;
+
+    margin: 0 auto 25px;
+}
