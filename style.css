@@ -1053,23 +1053,115 @@ a {
    ========================================================= */
 
 .contact {
-    text-align: center;
-
     background:
         radial-gradient(
-            circle at center,
+            circle at 50% 100%,
             rgba(214, 165, 43, 0.08),
-            transparent 50%
+            transparent 45%
         ),
-        var(--black);
+        #080808;
 }
 
-.contact p {
-    margin: 0 auto 35px;
+.contact-grid {
+    display: grid;
 
-    color: var(--gray);
+    grid-template-columns:
+        repeat(2, 1fr);
 
-    font-size: 17px;
+    gap: 15px;
+
+    margin-top: 55px;
+}
+
+.social-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 110px;
+
+    padding: 25px;
+
+    color: white;
+
+    text-decoration: none;
+
+    background: #101010;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+
+    background: #141414;
+
+    border-color:
+        rgba(214, 165, 43, 0.45);
+}
+
+.social-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid
+        rgba(214, 165, 43, 0.35);
+
+    color: var(--gold);
+
+    font-size: 24px;
+}
+
+.social-card span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.social-card h3 {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+.social-arrow {
+    margin-left: auto;
+
+    color: var(--gold);
+
+    font-size: 22px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.social-card:hover .social-arrow {
+    transform:
+        translate(4px, -4px);
 }
 
 
@@ -1185,6 +1277,24 @@ footer p + p {
 
 
 @media (max-width: 700px) {
+
+       /* =====================================================
+       CONTACTO — MOBILE
+       ===================================================== */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        min-height: 95px;
+
+        padding: 20px;
+    }
+
+    .social-card h3 {
+        font-size: 16px;
+    }
 
        /* =====================================================
        LIGHTBOX — MOBILE
