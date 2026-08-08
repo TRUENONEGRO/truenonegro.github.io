@@ -2283,3 +2283,43 @@ section {
 
     margin: 0 auto 28px;
 }
+
+
+/* =========================================================
+   HERO MOBILE — PANEO AUTOMÁTICO DE LA FOTO
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        background-position: center center;
+
+        animation: heroMobilePan 15s ease-in-out infinite;
+    }
+
+}
+
+
+/* =========================================================
+   MOVIMIENTO DE LA IMAGEN
+   ========================================================= */
+
+@keyframes heroMobilePan {
+
+    0% {
+        background-position: 15% center;
+    }
+
+    33% {
+        background-position: 50% center;
+    }
+
+    66% {
+        background-position: 85% center;
+    }
+
+    100% {
+        background-position: 15% center;
+    }
+
+}
