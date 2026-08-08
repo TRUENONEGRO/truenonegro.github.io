@@ -910,7 +910,7 @@ a {
 }
 
 /* =========================================================
-   GALERÍA
+   GALERÍA — ESCRITORIO
    ========================================================= */
 
 .gallery {
@@ -921,25 +921,27 @@ a {
     width: 100%;
     margin-top: 55px;
 
-    display: grid;
+    display: grid !important;
 
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 
-    gap: 12px;
+    grid-auto-rows: auto !important;
 
-    align-items: stretch;
+    gap: 14px;
 }
 
 
 /* =========================================================
-   FOTOS
+   CONTENEDOR DE CADA FOTO
    ========================================================= */
 
 .gallery-item {
     position: relative;
 
-    width: 100%;
-    aspect-ratio: 4 / 3;
+    width: 100% !important;
+    height: auto !important;
+
+    aspect-ratio: 4 / 3 !important;
 
     overflow: hidden;
 
@@ -953,16 +955,16 @@ a {
 
 
 /* =========================================================
-   IMÁGENES
+   IMAGEN
    ========================================================= */
 
 .gallery-item img {
     display: block;
 
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
 
-    object-fit: cover;
+    object-fit: cover !important;
 
     opacity: 1;
     visibility: visible;
@@ -974,12 +976,11 @@ a {
 
 
 /* =========================================================
-   EFECTO HOVER
+   HOVER
    ========================================================= */
 
 .gallery-item:hover img {
     transform: scale(1.05);
-
     filter: brightness(0.85);
 }
 
@@ -991,9 +992,7 @@ a {
 @media (max-width: 900px) {
 
     .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
 
 }
@@ -1006,15 +1005,13 @@ a {
 @media (max-width: 600px) {
 
     .gallery-grid {
-        grid-template-columns: 1fr;
-
+        grid-template-columns: 1fr !important;
         gap: 10px;
-
         margin-top: 35px;
     }
 
     .gallery-item {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 4 / 3 !important;
     }
 
 }
@@ -1469,10 +1466,7 @@ footer p + p {
     }
 
    
-    .gallery-item:nth-child(7n + 3) {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
+   
        /* =====================================================
        VIDEOS — MOBILE
        ===================================================== */
