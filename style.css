@@ -1468,7 +1468,7 @@ footer p + p {
         gap: 6px;
     }
 
-    .gallery-item:nth-child(5n + 1),
+   
     .gallery-item:nth-child(7n + 3) {
         grid-column: span 1;
         grid-row: span 1;
