@@ -2322,3 +2322,74 @@ section {
     }
 
 }
+
+/* =========================================================
+   AJUSTES ESCRITORIO — INTEGRANTES Y DISCOGRAFÍA
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    /* INTEGRANTES: 4 fotos en una sola fila */
+
+    .members-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        width: 100%;
+    }
+
+    .member {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .member-image {
+        width: 100%;
+        aspect-ratio: 5 / 4;
+        height: auto;
+        background-size: cover;
+        background-position: center top;
+    }
+
+
+    /* DISCOGRAFÍA */
+
+    .discography {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        width: 100%;
+    }
+
+    .discography .section-container {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .album-featured {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        width: 100%;
+    }
+
+    .albums-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+        width: 100%;
+    }
+
+    .album {
+        min-width: 0;
+    }
+
+
+    /* PATAGONIA METAL FEST */
+
+    .band-management {
+        margin-bottom: 20px;
+    }
+
+}
