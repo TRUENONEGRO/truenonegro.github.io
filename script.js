@@ -11,7 +11,6 @@
 const header = document.querySelector(".header");
 const menuToggle = document.querySelector("#menu-toggle");
 const navMenu = document.querySelector("#nav-menu");
-const navLinks = document.querySelectorAll(".nav-menu a");
 
 
 /* =========================================================
@@ -19,6 +18,8 @@ const navLinks = document.querySelectorAll(".nav-menu a");
    ========================================================= */
 
 window.addEventListener("scroll", () => {
+
+    if (!header) return;
 
     if (window.scrollY > 50) {
         header.classList.add("scrolled");
@@ -33,7 +34,7 @@ window.addEventListener("scroll", () => {
    MENÚ MOBILE
    ========================================================= */
 
-if (menuToggle) {
+if (menuToggle && navMenu) {
 
     menuToggle.addEventListener("click", () => {
 
@@ -41,22 +42,22 @@ if (menuToggle) {
 
     });
 
-}
 
+    /* Cerrar menú al seleccionar una sección */
 
-/* =========================================================
-   CERRAR MENÚ AL SELECCIONAR UNA SECCIÓN
-   ========================================================= */
+    const navLinks = navMenu.querySelectorAll("a");
 
-navLinks.forEach(link => {
+    navLinks.forEach(link => {
 
-    link.addEventListener("click", () => {
+        link.addEventListener("click", () => {
 
-        navMenu.classList.remove("active");
+            navMenu.classList.remove("active");
+
+        });
 
     });
 
-});
+}
 
 
 /* =========================================================
@@ -68,35 +69,39 @@ const animatedElements = document.querySelectorAll(
 );
 
 
-const observer = new IntersectionObserver(
-    entries => {
+if ("IntersectionObserver" in window) {
 
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver(
+        entries => {
 
-            if (entry.isIntersecting) {
+            entries.forEach(entry => {
 
-                entry.target.classList.add("visible");
+                if (entry.isIntersecting) {
 
-                observer.unobserve(entry.target);
+                    entry.target.classList.add("visible");
 
-            }
+                    observer.unobserve(entry.target);
 
-        });
+                }
 
-    },
-    {
-        threshold: 0.15
-    }
-);
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
 
 
-animatedElements.forEach(element => {
+    animatedElements.forEach(element => {
 
-    element.classList.add("scroll-animation");
+        element.classList.add("scroll-animation");
 
-    observer.observe(element);
+        observer.observe(element);
 
-});
+    });
+
+}
 
 
 /* =========================================================
@@ -127,6 +132,7 @@ const currentYear = new Date().getFullYear();
 
 const footerYear = document.querySelector("footer p");
 
+
 if (footerYear) {
 
     footerYear.textContent =
@@ -156,37 +162,3 @@ window.addEventListener("scroll", () => {
     }
 
 });
-
-
-// =========================================================
-// MENÚ MOBILE
-// =========================================================
-
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-
-if (menuToggle && navMenu) {
-
-    menuToggle.addEventListener("click", () => {
-
-        navMenu.classList.toggle("active");
-
-    });
-
-
-    // Cerrar menú al seleccionar una sección
-
-    const navLinks = navMenu.querySelectorAll("a");
-
-    navLinks.forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navMenu.classList.remove("active");
-
-        });
-
-    });
-
-}
-
