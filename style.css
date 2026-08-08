@@ -2414,7 +2414,7 @@ section {
 
     .member-image {
         width: 100%;
-        aspect-ratio: 5 / 4;
+        aspect-ratio: 4 / 5;
         height: auto;
         background-size: cover;
         background-position: center top;
