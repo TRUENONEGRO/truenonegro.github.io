@@ -911,7 +911,7 @@ a {
 
 /* =========================================================
    GALERÍA
-   ========================================================= */
+========================================================= */
 
 .gallery {
     background: #050505;
@@ -922,51 +922,48 @@ a {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    grid-auto-rows: 260px;
+    gap: 12px;
 
-    gap: 8px;
+    width: 100%;
 }
 
 
 /* =========================================================
    FOTOS
-   ========================================================= */
+========================================================= */
 
 .gallery-item {
     position: relative;
+
+    width: 100%;
+    aspect-ratio: 4 / 3;
 
     overflow: hidden;
 
     background: #0c0c0c;
 
     cursor: pointer;
-}
 
-
-/* Algunas fotos ocupan más espacio */
-
-.gallery-item:nth-child(5n + 1) {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.gallery-item:nth-child(7n + 3) {
-    grid-row: span 2;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 
 /* =========================================================
    IMÁGENES
-   ========================================================= */
+========================================================= */
 
 .gallery-item img {
+    display: block;
+
     width: 100%;
     height: 100%;
 
     object-fit: cover;
+
+    opacity: 1;
+    visibility: visible;
 
     transition:
         transform 0.7s ease,
@@ -974,6 +971,58 @@ a {
 }
 
 
+/* =========================================================
+   EFECTO HOVER
+========================================================= */
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+
+    filter: brightness(1.08);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+
+        margin-top: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUEÑO
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
 /* =========================================================
    OVERLAY
    ========================================================= */
