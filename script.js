@@ -65,7 +65,7 @@ if (menuToggle && navMenu) {
    ========================================================= */
 
 const animatedElements = document.querySelectorAll(
-    ".section-container, .album, .member, .show-card, .video-placeholder"
+    ".album, .member, .show-card, .video-placeholder"
 );
 
 
