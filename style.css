@@ -2393,3 +2393,31 @@ section {
     }
 
 }
+
+/* =========================================================
+   INTEGRANTES — ESCRITORIO
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+    .members-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        width: 100%;
+    }
+
+    .member {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .member-image {
+        width: 100%;
+        aspect-ratio: 5 / 4;
+        height: auto;
+        background-size: cover;
+        background-position: center top;
+    }
+
+}
