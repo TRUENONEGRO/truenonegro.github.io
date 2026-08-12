@@ -1211,6 +1211,42 @@ a {
 
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+
+    .shows-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-top: 40px;
+    }
+
+
+    .show-info {
+        padding: 24px;
+    }
+
+
+    .show-info h3 {
+        font-size: 24px;
+    }
+
+
+    .show-description {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+
+    .show-ticket {
+        width: 100%;
+    }
+
+}
+
+
 /* =========================================================
    CONTACTO
    ========================================================= */
