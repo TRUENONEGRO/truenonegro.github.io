@@ -1048,19 +1048,26 @@ a {
 }
 
 /* =========================================================
-   PRÓXIMOS SHOWS
+   SHOWS
 ========================================================= */
+
+.shows {
+    background: #080808;
+}
 
 .shows-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+
+    gap: 28px;
+
     margin-top: 55px;
 }
 
 
 /* =========================================================
-   SHOW CARD
+   TARJETA DEL SHOW
 ========================================================= */
 
 .show-card {
@@ -1070,7 +1077,7 @@ a {
 
     border: 1px solid rgba(255, 255, 255, 0.08);
 
-    padding: 35px;
+    overflow: hidden;
 
     transition:
         transform 0.4s ease,
@@ -1086,20 +1093,33 @@ a {
 
 
 /* =========================================================
-   FECHA
+   IMAGEN DEL SHOW
 ========================================================= */
 
-.show-date {
-    display: inline-block;
+.show-image {
+    width: 100%;
 
-    color: var(--gold);
+    aspect-ratio: 16 / 9;
 
-    font-size: 13px;
-    font-weight: 700;
+    overflow: hidden;
 
-    letter-spacing: 3px;
+    background: #050505;
+}
 
-    margin-bottom: 18px;
+.show-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.show-card:hover .show-image img {
+    transform: scale(1.03);
 }
 
 
@@ -1107,56 +1127,71 @@ a {
    INFORMACIÓN
 ========================================================= */
 
-.show-info h3 {
-    margin: 0 0 8px;
-
-    font-size: 28px;
-
-    color: white;
-}
-
-.show-location {
-    margin: 0 0 20px;
-
-    color: rgba(255, 255, 255, 0.65);
-
-    font-size: 13px;
+.show-info {
+    padding: 30px;
 }
 
 
-/* =========================================================
-   ARTISTA / EVENTO DESTACADO
-========================================================= */
+.show-date {
+    display: block;
 
-.show-highlight {
-    display: inline-block;
+    margin-bottom: 10px;
 
     color: var(--gold);
 
-    font-size: 10px;
+    font-size: 12px;
 
     font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.show-info h3 {
+    margin: 0 0 8px;
+
+    color: white;
+
+    font-size: 28px;
+
+    letter-spacing: 1px;
+}
+
+
+.show-location {
+    margin: 0 0 18px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
 
     letter-spacing: 2px;
 
     text-transform: uppercase;
-
-    margin-bottom: 20px;
 }
 
 
-/* =========================================================
-   DESCRIPCIÓN
-========================================================= */
+.show-artist {
+    margin-bottom: 20px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
 
 .show-description {
-    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.75);
 
     font-size: 14px;
 
     line-height: 1.8;
-
-    margin: 0;
 }
 
 
@@ -1165,38 +1200,16 @@ a {
 ========================================================= */
 
 .show-ticket {
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
 
     margin-top: 28px;
-}
 
+    min-width: 210px;
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .shows-grid {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-        margin-top: 40px;
-    }
-
-    .show-card {
-        padding: 25px;
-    }
-
-    .show-info h3 {
-        font-size: 23px;
-    }
-
-    .show-description {
-        font-size: 13px;
-    }
-
+    text-decoration: none;
 }
 /* =========================================================
    CONTACTO
