@@ -1019,6 +1019,29 @@ a {
    SHOWS
    ========================================================= */
 
+.show-tickets {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.show-tickets .btn {
+    text-align: center;
+}
+
+.show-transfer {
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.show-transfer strong {
+    color: var(--gold);
+    letter-spacing: 1px;
+}
+
 .show-card {
     margin-top: 50px;
 
