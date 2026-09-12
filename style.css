@@ -2700,3 +2700,197 @@ section {
     }
 
 }
+
+
+/* =========================================================
+   LANZAMIENTO — AD AETERNUM
+========================================================= */
+
+.release-announcement {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(45, 35, 80, 0.20),
+            transparent 65%
+        ),
+        #050505;
+
+    padding: 110px 0;
+    border-top: 1px solid rgba(214, 165, 43, 0.12);
+    border-bottom: 1px solid rgba(214, 165, 43, 0.12);
+}
+
+.release-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+.release-label {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.release-container > h2 {
+    margin: 0;
+
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 0.95;
+
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.release-subtitle {
+    margin-top: 12px;
+
+    color: var(--gold);
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.release-content {
+    display: grid;
+    grid-template-columns: minmax(300px, 520px) 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    margin-top: 55px;
+}
+
+.release-image {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(214, 165, 43, 0.25);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.65);
+}
+
+.release-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.7s ease;
+}
+
+.release-image:hover img {
+    transform: scale(1.025);
+}
+
+.release-info {
+    max-width: 560px;
+}
+
+.release-date {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 22px;
+}
+
+.release-info h3 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    line-height: 1.15;
+
+    letter-spacing: 1px;
+}
+
+.release-info p {
+    margin: 0 0 18px;
+
+    color: #a9a9a9;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.release-info strong {
+    color: #ffffff;
+}
+
+.release-platforms {
+    margin-top: 30px;
+
+    color: #777777;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.release-button {
+    display: inline-block;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .release-announcement {
+        padding: 75px 0;
+    }
+
+    .release-container {
+        width: 88%;
+    }
+
+    .release-container > h2 {
+        font-size: 43px;
+    }
+
+    .release-subtitle {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .release-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        margin-top: 40px;
+    }
+
+    .release-image {
+        width: 100%;
+    }
+
+    .release-info h3 {
+        font-size: 23px;
+    }
+
+    .release-info p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+}
