@@ -2721,7 +2721,7 @@ section {
 }
 
 .release-container {
-    width: min(1200px, 90%);
+    width: min(1200px, 40%);
     margin: 0 auto;
 }
 
@@ -2860,7 +2860,7 @@ section {
     }
 
     .release-container {
-        width: 88%;
+        width: 38%;
     }
 
     .release-container > h2 {
